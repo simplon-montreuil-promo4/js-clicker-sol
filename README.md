@@ -1,48 +1,54 @@
-#Clicker
+# JS Cookie Clicker
 
-##Étape 1 : structure de base
-Faire une structure de base HTML / CSS / JS. Dans le HTML, mettre un bouton avec un identifiant « clic » et une div avec un identifiant « affichage », dont la valeur initiale sera 0.
+- Official Cookie Clicker: <http://orteil.dashnet.org/cookieclicker/>
+- CERN Particle Clicker: <https://particle-clicker.web.cern.ch/particle-clicker/>
 
-##Étape 2 : préparer le JS
-Préparez les variables en tête du JS qui nous permettront de manipuler notre bouton et notre div. Nous aurons également besoin d'une variable score que nous initialiserons à 0.
+![Chocolate Chip Cookies](chocolate_chip_cookies.jpg)
 
-##Étape 3 : augmenter le score
-Quand on clique sur le bouton, faire augmenter la variable score de 1, puis afficher ce score dans la div affichage.
+## Level 1: _Basic structure_
+Make the *HTML* / *CSS* / *JS* basic structure. In *HTML*, make a `button` with a "click" and identify a `div` with an *ID* `display` with initial value of `0`.
 
-##Étape 4 : préparation du multiplicateur
-Ajouter un bouton dont l'identifiant est multiplier. Préparer sa variable à coté de l'affichage et du bouton dans le JS. Entretenir un compteur de clics (dont la variable s'appellera multiplicateur et sera initialisée à 1) sur ce bouton. La fonction associée au clic du multiplicateur s'appellera augmenterMultiplicateur.
+## Level 2: _Create the basic JS_
+Write the head of *JS* variables that allow us to manipulate our `button` and our `div`. We will also need a `score` variable for resulted score and has initial value of `0`.
 
-##Étape 5 : utilisation du multiplicateur
-Faire en sorte que l'augmentation du score via le clic du premier bouton ne soit plus de 1 mais de la valeur du multiplicateur. Par exemple, si j'ai cliqué une fois sur le bouton multiplicateur, chaque clic sur le premier bouton ajoutera désormais 2 au lieu de 1.
+## Level 3: _Score increament_
+When you click the button, it will increase the variable `score` by `1`, and then display it in the score display `div`.
 
-##Étape 6 : prix du multiplicateur
-Le multiplicateur vous permet de gagner du score plus rapidement. Ça ne devrait pas être gratuit ! Faites en sorte que cliquer sur le bouton multiplicateur diminue de 50 votre score.
+## Level 4: _Multiplier creation_
+Add a `button` with the *ID* `multiply`. Create a click counter as variable and name it `multiplier` with value equal to `1`). After that create a`function` associated with the click multiplier called `augmenterMultiplicateur`.
 
-##Étape 7 : on ne fait pas crédit
-On ne peut pas faire crédit et on ne veut pas de score négatif. Pensez à mettre à jour l'affichage du score après l'achat !
+## Level 5: _Using the multiplier_
+Making the score increase by the value of the multiplier for each click. For example, if I clicked once on the multiplier button, each click on the first button now add `2` instead of `1`.
 
-##Étape 8 : affichage du compteur
-Affichez le compteur de multiplicateur à l'intérieur du bouton. Par exemple, si compteur vaut 5, il faut que le texte du bouton soit « Multiplicateur x5 ».
+## Level 6: _Multiplying the price_
+The multiplier allows you to gain score faster but this should not be free! For instance each time you click on the multiplier button this will deduct `50` score from your total gained score.
 
-##Étape 9 : augmentation du prix
-Acheter plein de multiplicateurs est trop facile. Essayez à partir de l'étape 6, vous comprendrez pourquoi  Il faudrait que plus on achète de multiplicateurs, plus ceux-ci soit chers.
-Par exemple, le premier vaudrait 50, le suivant 100, le suivant 200, etc. Pas la peine de vous compliquer la vie, ne faites pas pleins de conditions  Trouvez une autre façon de faire évoluer le prix !
+## Level 7: _We don't give credit_
+We can not give credit and we don't want to display negative score. Remember to update the display of the score after each purchase!
 
-##Étape 10 : affichage du prix
-Dans le texte du bouton, en plus du « x5 », ajouter le coût du prochain achat.
+## Level 8: _Counter display_
+Display the multiplier counter inside the `button`. For example, if the counter is equal to `5`, then the button should display
+"x5 multiplier".
 
-##Étape 11 : autoclicker
-Nouvelle amélioration à acheter : Autoclick. Dès que vous avez un score de 200, un clic est fait automatiquement chaque seconde. (setInterval est ton ami)
+## Level 9: _Price increament_
+Buy full multiplier is too easy. Go back to step 6, you will understand why we should buy more multipliers, plus they are expensive.
+For example, the first would be `50`, the following `100`, the following `200`, etc.. No need to complicate your life, do not do full conditions, find another way to change the price!
 
-##Étape 12: achat d'autoclicker
-L'autoclicker ne sera plus automatique. Il faut dorénavant acheter l'autoclicker. Vous ajouterez un bouton avec l'id autoclic. Il coutera 500. Une fois que l'autoclicker a été acheté, il faudra désactiver le bouton d'achat de l'autoclic.
+## Level 10: _Displaying of Price_
+Display the price onthe `button`, in addition to counter display like the previouse example which showed  "x5", it has to display the cost of the next purchase next to counter display.
 
-##Étape 13: achat d'un bonus
-Désormais, on doit pouvoir acheter un bonus qui augmente le score de 200% à chaque clic pendant 30 secondes. C'est à dire que si à chaque clic, le score augmente de 3, pendant les 30 secondes de bonus le score augmentera de 6 a chaque clic, au bout des 30 secondes le score augmentera à nouveau de 3 par clic.
-Vous créerez le bouton "BONUS" avec l'id bonus, et le bonus coutera 5000. Lorsque le bonus est acheté, le nombre de seconde s'affichera dans le bouton avec le décompte et le bouton devra etre désactivé pendant le temps du bonus. Quand le bonus est fini, le bouton est réactivé et retrouve son texte d'origine.
+## Level 11: _Autoclicker_
+Further improvement to buy is to use: autoclick. Once you have a credit of `200`, an automatic click will be done every second. (`setInterval` is your friend)
 
-##Étape 14: désactiver les boutons si j'ai pas le score pour acheter les améliorations
-Faire en sorte que les boutons multiplicateur, autoclic et bonus ne soient clicables QUE si j'ai le score nécessaire pour les acheter.
+## Level 12: _Shopping autoclicker_
+The autoclicker will not be automatic. We must now buy the autoclicker. You will add a button with *ID* `autoclic`. It will cost `500`. Once the autoclicker was purchased, it will disable the buy `button` of autoclic.
 
-##Étape 15: du CSS
-Que ce soit jouli! Pas d'images!
+## Level 13: _Buying a bonus_
+Now we must buy a bonus that will increases the scores by `200` for 30 seconds on each click. Each click, score increases by `3` for 30 seconds to score and the bonus will be increased by `6` for each click.
+You will create the "BONUS" button with *ID* `bonus`, and the bonus will cost `5000`. When the bonus is purchased, the number of seconds will appear in the button with counter and the button will be disabled during bonus time. When bonus timeout, the button will be reactivated and returns to its original condition.
+
+## Level 14: _Disable buttons (if you don't have scores to buy upgrades)_
+Ensure that the multiplier buttons, autoclic and bonuses are not active when there is no enough scores to buy upgrades.
+
+## Level 15: _CSS_
+Wheather is beautifull! No pictures!
